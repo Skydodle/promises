@@ -9,7 +9,6 @@ var request = require('request');
 var pluckFirstLineFromFile = function (filePath, callback) {
   fs.readFile(filePath, 'utf8', function (err, content) {
     if (err) {
-      console.error('fs.readFile failed :(\n', err);
       callback(err);
     } else {
       let splitSentences = content.split('\n');
